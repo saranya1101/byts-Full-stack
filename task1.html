@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK1</title>
+    <link rel="shortcut icon" href="taskimg.png" type="image/x-icon">
+    <link rel="stylesheet" href="C:\Users\saran\OneDrive\Desktop\js\css\stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <img src="taskimg.png" width="50px" >
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+           <li><a href="#">Task1</a></li>
+           <li><a href="task2.html">Task2</a></li>
+           <li><a href="task3.html">Task3</a></li>
+           <li><a href="task4.html">Task4</a></li>
+        </ul>
+           
+       </header>
+       
+       <br>
+       <center>
+       <fieldset>
+      <legend> ADD NUMBERS</legend>
+    <div id="Res"></div>
+    <br/>
+    <label for="number1">Number1</label>
+    <input type="number" name="number1" id="number1">
+    <pre></pre>
+    <br />
+    <label for="number2">Number2</label>
+    <input type="number" name="number2" id="number2">
+    <br />
+    <button class="submit" onclick="add()">Submit</button>
+</fieldset></center>
+    <script>
+        function add() {
+            Number1 = document.getElementById("number1").value;
+            Number2 = document.getElementById("number2").value;
+            let sum = Number(Number1) + Number(Number2);
+            res = document.getElementById("Res");
+            res.innerText = `Res:${sum}`;
+
+
+        }
+       </script>
+
+
+   
+</body>
+
+</html>

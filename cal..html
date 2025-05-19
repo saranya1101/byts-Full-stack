@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+      <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b8b5b6;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_Z4B-YaliZ8IXn4U2WMjLpkRrCvu49YSig&s");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 10;
+            padding: 5;
+        }
+
+
+       
+        center {
+            margin-top: 50px;
+        }
+
+
+       
+        h1 {
+            color: #333;
+        }
+
+
+       
+        #value {
+            width: 230px;
+            height: 40px;
+            font-size: 20px;
+            text-align: right;
+            padding: 5px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+       
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+
+       
+        .num-btn {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #a0abc9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+
+
+       
+        .num-btn:hover {
+            background-color: #3041a0;
+        }
+
+
+       
+        .num-btn:nth-child(15), .num-btn:nth-child(16) {
+            background-color: #cf936b;
+        }
+
+
+        .num-btn:nth-child(15):hover, .num-btn:nth-child(16):hover {
+            background-color: #eeeeee;
+        }
+
+
+       
+        td {
+            padding: 5px;
+        }
+    </style>
+
+
+    <center>
+    <h1><strong>CALCULATOR</strong></h1>
+     <br/>
+    <input type="text" id="value">
+    <br/>
+    <tabel>
+        <tr>
+            <td><button class="num-btn" onclick="appendvalue('1')">1</button></td>
+            <td><button class="num-btn" onclick="appendvalue('2')">2</button></td>
+            <td><button class="num-btn" onclick="appendvalue('3')">3</button></td>
+            <td><button class="num-btn" onclick="appendvalue('+')">+</button></td>
+        </tr>
+        <br/>
+        <tr>
+            <td><button class="num-btn" onclick="appendvalue('4')">4</button></td>
+            <td><button class="num-btn" onclick="appendvalue('5')">5</button></td>
+            <td><button class="num-btn" onclick="appendvalue('6')">6</button></td>
+            <td><button class="num-btn" onclick="appendvalue('-')">-</button></td>
+        </tr>
+        <br/>
+        <tr>
+            <td><button class="num-btn" onclick="appendvalue('7')">7</button></td>
+            <td><button class="num-btn" onclick="appendvalue('8')">8</button></td>
+            <td><button class="num-btn" onclick="appendvalue('9')">9</button></td>
+            <td><button class="num-btn" onclick="appendvalue('*')">*</button></td>
+        </tr>
+        <br/>
+        <tr>
+            <td><button class="num-btn" onclick="appendvalue('0')">0</button></td>
+            <td><button class="num-btn" onclick="appendvalue('/')">/</button></td>
+            <td><button class="num-btn" onclick="cleartext()">c</button></td>
+            <td><button class="num-btn" onclick="calculate()">=</button></td>
+        </tr>
+     
+    </tabel>
+    <script>
+        function appendvalue(val){
+            document.getElementById('value').value+=val;
+        }
+        function cleartext(){
+                document.getElementById('value').value='';
+        }
+        function calculate(){
+            try{
+                 document.getElementById('value').value= eval(document.getElementById('value').value);
+            }
+            catch{
+                alert("invalid expression");
+            }
+        }
+    </script>
+    </center>
+</body>
+</html>

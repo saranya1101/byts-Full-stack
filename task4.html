@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK4</title>
+    <link rel="shortcut icon" href="taskimg.png" type="image/x-icon">
+    <link rel="stylesheet" href="C:\Users\saran\OneDrive\Desktop\js\css\stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <img src="taskimg.png" width="50px">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="task1.html">Task1</a></li>
+            <li><a href="task2.html">Task2</a></li>
+            <li><a href="task3.html">Task3</a></li>
+            <li><a href="#">Task4</a></li>
+        </ul>
+    </header>
+    <br />
+    <center><fieldset>
+    <legend>CALCULATOR</legend>
+     <br/>
+    <input type="text" id="value">
+    <br/>
+    <tabel>
+        <tr>
+            <td><button class="num-btn" onclick="appendvalue('1')">1</button></td>
+            <td><button class="num-btn" onclick="appendvalue('2')">2</button></td>
+            <td><button class="num-btn" onclick="appendvalue('3')">3</button></td>
+            <td><button class="num-btn" onclick="appendvalue('+')">+</button></td>
+        </tr>
+        <br/>
+        <tr>
+            <td><button class="num-btn" onclick="appendvalue('4')">4</button></td>
+            <td><button class="num-btn" onclick="appendvalue('5')">5</button></td>
+            <td><button class="num-btn" onclick="appendvalue('6')">6</button></td>
+            <td><button class="num-btn" onclick="appendvalue('-')">-</button></td>
+        </tr>
+        <br/>
+        <tr>
+            <td><button class="num-btn" onclick="appendvalue('7')">7</button></td>
+            <td><button class="num-btn" onclick="appendvalue('8')">8</button></td>
+            <td><button class="num-btn" onclick="appendvalue('9')">9</button></td>
+            <td><button class="num-btn" onclick="appendvalue('*')">*</button></td>
+        </tr>
+        <br/>
+        <tr>
+            <td><button class="num-btn" onclick="appendvalue('0')">0</button></td>
+            <td><button class="num-btn" onclick="appendvalue('/')">/</button></td>
+            <td><button class="num-btn" onclick="cleartext()">c</button></td>
+            <td><button class="num-btn" onclick="calculate()">=</button></td>
+        </tr>
+     
+    </tabel></fieldset> </center>
+    <script>
+        function appendvalue(val){
+            document.getElementById('value').value+=val;
+        }
+        function cleartext(){
+                document.getElementById('value').value='';
+        }
+        function calculate(){
+            try{
+                 document.getElementById('value').value= eval(document.getElementById('value').value);
+            }
+            catch{
+                alert("invalid expression");
+            }
+        }
+    </script>
+   
+</body>
+
+</html>

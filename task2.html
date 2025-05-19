@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK2</title>
+    <link rel="shortcut icon" href="taskimg.png" type="image/x-icon">
+    <link rel="stylesheet" href="C:\Users\saran\OneDrive\Desktop\js\css\stylesheet.css">
+</head>
+<body>
+    <header>
+    <img src="taskimg.png" width="50px" >
+       
+     <ul>
+        <li><a href="home.html">Home</a></li>
+<li><a href="task1.html">Task1</a></li>
+        <li><a href="#">Task2</a></li>
+        <li><a href="task3.html">Task3</a></li>
+        <li><a href="task4.html">Task4</a></li>
+     </ul>
+        
+    </header>
+    <center><fieldset>
+   <legend> STOP WATCH</legend>
+    <br>
+    <body>
+        <div id="count"></div>
+        <br/>
+        <button class="b1" onclick="start()">Start</button>
+        <button class="b1" onclick="stop()">Stop</button>
+        <button class="b1" onclick="restart()">Restart</button></fieldset></center>
+        <script>
+             let count = 0;
+             let intid=0
+            function start(){
+             
+           intid=setInterval(()=>{
+                 document.getElementById('count').innerText=++count;
+                 
+             },1000);
+            }
+            function stop(){
+              clearInterval(intid);
+            }
+            function restart(){
+                count=0;
+                 document.getElementById('count').innerText=count;
+               
+            }
+           
+    
+    
+        </script>
+    
+</body>
+</html>
